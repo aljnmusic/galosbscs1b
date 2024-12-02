@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSCS 1B</title>
+    <link rel="shortcut icon" href="/img/icons8-favorite-16.png" type="image/x-icon">
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<style>
+
+    li, #subjects p, #teachers pre, #home pre, #home p, header a, #teachers p, footer, #home a, #schedule p, #schedule pre, #schedule table{
+        text-shadow: 0 0 5px black;
+    }
+    
+</style>
+<body class="relative">
+    <header class="flex items-center justify-between w-full fixed top-0 z-10 h-[3.5rem]">
+        <!-- Logo -->
+        <img src="/img/logo.png" alt="tesla logo" class="hidden sm:block h-8">
+
+        <div class="lg:hidden cursor-pointer ml-2" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </div>
+
+        <!-- Nav Links -->
+        <div class="lg:block cursor-pointer mr-3" id="nav-links">
+            <a href="#home" class="text-white text-lg lg:text-2xl ml-0 mr-1 lg:mr-10 font-robotoCondensed font-medium hover:text-yellow-200 hover:underline">Home</a>
+            <a href="#teachers" class="text-white text-lg lg:text-2xl mr-1 lg:mr-10 font-robotoCondensed font-medium hover:text-yellow-200 hover:underline">Teachers</a>
+            <!-- <a href="#subjects" class="text-white text-xl mr-10 font-robotoCondensed font-medium hover:text-yellow-200 hover:underline">Subjects</a> -->
+            <a href="#schedule" class="text-white text-lg lg:text-2xl mr-1 lg:mr-10 font-robotoCondensed font-medium hover:text-yellow-200 hover:underline">Schedule</a>
+            <a href="#students" class="text-white text-lg lg:text-2xl font-robotoCondensed font-medium hover:text-yellow-200 hover:underline">Students</a>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Home -->
+    <section id="home" class="w-full h-screen flex items-center justify-center relative">
+        <img src="/img/7.jpg" alt="home" class="w-full h-full object-cover object-center">
+
+        <div class="flex align-center justify-center flex-col absolute left-10 lg:left-36 top-24 lg:top-60 origin-top">
+            <pre class="text-6xl lg:text-9xl font-robotoCondensed text-white font-bold"><span class="text-yellow-200">Eat,</span> Sleep,
+Code, <span class="text-yellow-200 underline decoration-8">Hibi.</span></pre>
+
+            <div class="hidden lg:block mt-8 cursor-pointer absolute pt-72 lg:mt-20 lg:ml-14">
+                <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl mr-5 font-robotoCondensed border rounded-md px-6 py-1 hover:bg-yellow-200 hover:text-white">Login</a>
+                <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl font-robotoCondensed border rounded-md px-4 py-1 hover:bg-yellow-200 hover:text-white">Sign Up</a>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center h-1/6 w-full lg:h-1/2 lg:w-1/3 absolute pt-48 top-48 lg:pt-0 lg:right-36 lg:top-56">
+            <p class="lg:text-2xl text-center text-sm indent-8 lg:text-center font-robotoCondensed font-bold text-slate-300">We are <span class="text-yellow-200">BSCS 1B</span>, a <span class="text-yellow-200">dynamic</span> and <span class="text-yellow-200">diverse</span> group of students with different <span class="text-yellow-200">backgrounds</span>, <span class="text-yellow-200">talents</span>, and <span class="text-yellow-200">skills</span>. Each of us brings a <span class="text-yellow-200">unique perspective</span>, which <span class="text-yellow-200">enriches</span> our <span class="text-yellow-200">learning environment</span>. <span class="text-yellow-200">Together</span>, we <span class="text-yellow-200">collaborate</span> and <span class="text-yellow-200">support one another</span>, <span class="text-yellow-200">embracing</span> our <span class="text-yellow-200">differences</span> while <span class="text-yellow-200">striving</span> for shared <span class="text-yellow-200">academic</span> and <span class="text-yellow-200">personal growth</span>. Our <span class="text-yellow-200">collective strength</span> enable us to <span class="text-yellow-200">tackle challenges</span> with <span class="text-yellow-200">creativity</span> and <span class="text-yellow-200">resilience</span>, fostering a sense of <span class="text-yellow-200">unity</span> and <span class="text-yellow-200">teamwork</span>. As we journey through our studies, we are <span class="text-yellow-200">committed</span> to not only <span class="text-yellow-200">mastering</span> our <span class="text-yellow-200">field</span> but also building lasting <span class="text-yellow-200">connections</span> and <span class="text-yellow-200">preparing</span> ourselves for the <span class="text-yellow-200">future</span>.</p>
+
+            <div class="lg:hidden mt-8 cursor-pointer absolute pt-10 top-72">
+                <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl mr-5 font-robotoCondensed border rounded-md px-6 py-1 hover:bg-yellow-200 hover:text-white">Login</a>
+                <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl font-robotoCondensed border rounded-md px-4 py-1 hover:bg-yellow-200 hover:text-white">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Teachers -->
+    <section id="teachers" class="w-full h-screen flex items-center justify-center relative overflow-hidden">
+        <img src="/img/18.jpg" alt="home" class="absolute inset-0 w-full h-screen object-cover object-center">
+
+        <div class="flex align-center justify-center flex-col absolute top-20 origin-top">
+            <pre class="lg:text-6xl text-4xl font-robotoCondensed text-yellow-200 font-bold"><span class="text-white">Meet</span> Our <span class="text-white">Teachers.</span></pre>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 absolute top-36  lg:mt-4 mt-0 p-0 items-center justify-center grid-flow-row h-48 w-full text-sm">
+            <div class="text-center text-xs flex flex-col justify-center items-center">
+                <img src="/img/32.jpg" alt="" class="w-16 h-16 rounded-full hover:shadow-black hover:shadow-md">
+                <p class="text-white font-semibold italic">Mr. <span class="text-yellow-300">Michael</span> Amata</p>
+                <p class="text-white font-semibold italic">Introduction to <span class="text-yellow-300">Computing</span></p>
+            </div>
+            <div class="text-center text-xs flex flex-col justify-center items-center">
+                <img src="/img/33.jpg" alt="" class="w-16 h-16 rounded-full hover:shadow-black hover:shadow-md">
+                <p class="text-white font-semibold italic">Ms. <span class="text-yellow-300">Angelyn</span> Benitez</p>
+                <p class="text-white font-semibold italic">Discrete <span class="text-yellow-300">Structures</span></p>
+            </div>
+            <div class="text-center text-xs flex flex-col justify-center items-center">
+                <img src="/img/34.jpg" alt="" class="w-16 h-16 rounded-full hover:shadow-black hover:shadow-md">
+                <p class="text-white font-semibold italic">Mr. <span class="text-yellow-300">Omen</span> Cano</p>
+                <p class="text-white font-semibold italic">Contemporary <span class="text-yellow-300">World</span></p>
+            </div>
+            <div class="text-center text-xs flex flex-col justify-center items-center">
+                <img src="/img/35.jpg" alt="" class="w-16 h-16 rounded-full hover:shadow-black hover:shadow-md">
+                <p class="text-white font-semibold italic">Mr. <Span class="text-yellow-300">Ricky</Span> Laureta</p>
+                <p class="text-white font-semibold italic">Readings In <span class="text-yellow-300">Philippines</span> History</p>
+            </div>
+            <div class="text-center text-xs flex flex-col justify-center items-center">
+                <img src="/img/40.jpg" alt="" class="w-16 h-16 rounded-full hover:shadow-black hover:shadow-md">
+                <p class="text-white font-semibold italic">Mr. <Span class="text-yellow-300">Rempson</Span> Base</p>
+                <p class="text-yellow-300 font-semibold italic">Civic Welfare Training Service</p>
+            </div>
+            <div class="text-center text-xs flex flex-col justify-center items-center">
+                <img src="/img/36.jpg" alt="" class="w-16 h-16 rounded-full hover:shadow-black hover:shadow-md">
+                <p class="text-white font-semibold italic">Mr. <span class="text-yellow-300">Jholan</span> Sabaria</p>
+                <p class="text-white font-semibold italic">Fundamentals Of <span class="text-yellow-300">Programming</span></p>
+            </div>
+            <div class="text-center text-xs flex flex-col justify-center items-center">
+                <img src="/img/37.jpg" alt="" class="w-16 h-16 rounded-full hover:shadow-black hover:shadow-md">
+                <p class="text-white font-semibold italic">Mr. <span class="text-yellow-300">Aldrin</span> Rodriquez</p>
+                <p class="text-white font-semibold italic">Peace <span class="text-yellow-300">Studies</span></p>
+            </div>
+            <div class="text-center text-xs flex flex-col justify-center items-center">
+                <img src="/img/38.jpg" alt="" class="w-16 h-16 rounded-full hover:shadow-black hover:shadow-md">
+                <p class="text-white font-semibold italic">Mr. <span class="text-yellow-300">Allan</span> Asetre</p>
+                <p class="text-yellow-300">Physical Activity, Health & Fitness</p>
+            </div>
+        </div>
+
+        <div class="absolute bottom-14 lg:block cursor-pointer">
+            <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl mr-5 font-robotoCondensed border rounded-md px-6 py-1 hover:bg-yellow-200 hover:text-white blank">Join Us</a>
+            <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl font-robotoCondensed border rounded-md px-4 py-1 hover:bg-yellow-200 hover:text-white">Sign Up</a>
+        </div>
+        <!-- <div class="flex items-center justify-end h-2/4 w-1/3 absolute right-36">
+            <p class="text-center text-xl indent-8 font-robotoCondensed font-bold text-slate-300">We are <span class="text-yellow-200">BSCS 1B</span>, a <span class="text-yellow-200">dynamic</span> and <span class="text-yellow-200">diverse</span> group of students with different <span class="text-yellow-200">backgrounds</span>, <span class="text-yellow-200">talents</span>, and <span class="text-yellow-200">skills</span>. Each of us brings a <span class="text-yellow-200">unique perspective</span>, which <span class="text-yellow-200">enriches</span> our <span class="text-yellow-200">learning environment</span>. <span class="text-yellow-200">Together</span>, we <span class="text-yellow-200">collaborate</span> and <span class="text-yellow-200">support one another</span>, <span class="text-yellow-200">embracing</span> our <span class="text-yellow-200">differences</span> while <span class="text-yellow-200">striving</span> for shared <span class="text-yellow-200">academic</span> and <span class="text-yellow-200">personal growth</span>. Our <span class="text-yellow-200">collective strength</span> enable us to <span class="text-yellow-200">tackle challenges</span> with <span class="text-yellow-200">creativity</span> and <span class="text-yellow-200">resilience</span>, fostering a sense of <span class="text-yellow-200">unity</span> and <span class="text-yellow-200">teamwork</span>. As we journey through our studies, we are <span class="text-yellow-200">committed</span> to not only <span class="text-yellow-200">mastering</span> our <span class="text-yellow-200">field</span> but also building lasting <span class="text-yellow-200">connections</span> and <span class="text-yellow-200">preparing</span> ourselves for the <span class="text-yellow-200">future</span>.</p>
+        </div> -->
+    </section>
+
+
+    <!-- Schedule -->
+    <section id="schedule" class="w-full h-screen flex items-center justify-center relative">
+        <img src="/img/9.jpg" alt="home" class="w-full h-full object-cover object-center">
+
+        <div class="flex align-center justify-center flex-col absolute top-20 origin-top">
+            <pre class="lg:text-6xl text-4xl font-robotoCondensed text-yellow-200 font-bold"><span class="text-white">Our</span> Class <span class="text-white">Schedule.</span></pre>
+        </div>
+
+            <div class="hidden lg:block mt-8 cursor-pointer absolute pt-72 lg:mt-20 lg:ml-14">
+                <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl mr-5 font-robotoCondensed border rounded-md px-6 py-1 hover:bg-yellow-200 hover:text-white">Login</a>
+                <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl font-robotoCondensed border rounded-md px-4 py-1 hover:bg-yellow-200 hover:text-white">Sign Up</a>
+            </div>
+        </div>
+
+        <div class="flex flex-row items-center justify-center h-8 w-full lg:h-1/2 lg:w-1/3 absolute pt-0 top-48 lg:pt-0 lg:right-36 lg:top-56">
+            <div class="w-full flex justify-center items-center">
+                <p class="text-2xl font-robotoCondensed text-white font-semibold italic cursor-pointer" id="monday">M</p>
+                    <div id="monday-schedule" class="hidden w-full flex flex-col justify-center items-center absolute top-full mt-8 ml-60">
+                        <p class="ml-12 text-xl font-robotoCondensed text-white font-semibold italic">Monday Schedule Details</p>
+                        <table class="text-white mt-4 ml-6">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-2">Time</th>
+                                    <th class="px-4 py-2">Subject</th>
+                                    <th class="px-4 py-2">Room</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border px-4 py-2 text-yellow-300">7:30 - 9:30 AM</td>
+                                    <td class="border px-4 py-2">CAH3</td>
+                                    <td class="border px-4 py-2 text-yellow-300">RM21</td>
+                                </tr>
+                                <tr>
+                                    <td class="border px-4 py-2">1:00 - 3:00 PM</td>
+                                    <td class="border px-4 py-2 text-yellow-300">RPH</td>
+                                    <td class="border px-4 py-2">RM14</td>
+                                </tr>
+                                <tr>
+                                    <td class="border px-4 py-2 text-yellow-300">3:00 - 5:00 PM</td>
+                                    <td class="border px-4 py-2">CC1</td>
+                                    <td class="border px-4 py-2 text-yellow-300">RM12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+
+            <div class="w-full flex justify-center items-center">
+                <p class="text-2xl font-robotoCondensed text-yellow-300 font-semibold italic cursor-pointer" id="tuesday">T</p>
+                <div id="tuesday-schedule" class="hidden w-full flex flex-col justify-center items-center absolute top-full mt-8 ml-32">
+                    <p class="ml-12 text-xl font-robotoCondensed text-white font-semibold italic">Tuesday Schedule Details</p>
+                    <table class="text-white mt-4 ml-6">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2">Time</th>
+                                <th class="px-4 py-2">Subject</th>
+                                <th class="px-4 py-2">Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">7:30 - 9:30 AM</td>
+                                <td class="border px-4 py-2">CAH4</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM13</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">10:30 - 11:30 PM</td>
+                                <td class="border px-4 py-2 text-yellow-300">CC2</td>
+                                <td class="border px-4 py-2">RM14</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">1:00 - 3:00 PM</td>
+                                <td class="border px-4 py-2">GE1</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM14</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-center items-center">
+                <p class="text-2xl font-robotoCondensed text-white font-semibold italic cursor-pointer" id="wednesday">W</p>
+                <div id="wednesday-schedule" class="hidden w-full flex flex-col justify-center items-center absolute top-full mt-8 ml-8">
+                    <p class="ml-12 text-xl font-robotoCondensed text-white font-semibold italic">Wednesday Schedule Details</p>
+                    <table class="text-white mt-4 ml-6">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2">Time</th>
+                                <th class="px-4 py-2">Subject</th>
+                                <th class="px-4 py-2">Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">7:30 - 9:30 AM</td>
+                                <td class="border px-4 py-2">PATHFIT</td>
+                                <td class="border px-4 py-2 text-yellow-300">GYM1</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">10:30 - 11:30 PM</td>
+                                <td class="border px-4 py-2 text-yellow-300">CC2</td>
+                                <td class="border px-4 py-2">RM14</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">1:00 - 2:00 PM</td>
+                                <td class="border px-4 py-2">RPH</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM14</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">3:00 - 5:00 PM</td>
+                                <td class="border px-4 py-2">CC1</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-center items-center">
+                <p class="text-2xl font-robotoCondensed text-yellow-300 font-semibold italic" id="thursday">T</p>
+                <div id="thursday-schedule" class="hidden w-full flex flex-col justify-center items-center absolute top-full mt-8 ml-0 mr-20">
+                    <p class="ml-12 text-xl font-robotoCondensed text-white font-semibold italic">Thursday Schedule Details</p>
+                    <table class="text-white mt-4 ml-6">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2">Time</th>
+                                <th class="px-4 py-2">Subject</th>
+                                <th class="px-4 py-2">Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">8:30 - 9:30 AM</td>
+                                <td class="border px-4 py-2">GE1</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM14</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">9:30 - 11:30 PM</td>
+                                <td class="border px-4 py-2 text-yellow-300">DS1</td>
+                                <td class="border px-4 py-2">RM14</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">1:00 - 2:00 PM</td>
+                                <td class="border px-4 py-2">CAH3</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM21</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">4:00 - 5:00 PM</td>
+                                <td class="border px-4 py-2">CC1</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="w-full flex justify-center items-center">
+                <p class="text-2xl font-robotoCondensed text-white font-semibold italic" id="friday">F</p>
+                <div id="friday-schedule" class="hidden w-full flex flex-col justify-center items-center absolute top-full mt-8 ml-0 mr-44">
+                    <p class="ml-12 text-xl font-robotoCondensed text-white font-semibold italic">Friday Schedule Details</p>
+                    <table class="text-white mt-4 ml-6">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2">Time</th>
+                                <th class="px-4 py-2">Subject</th>
+                                <th class="px-4 py-2">Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">8:30 - 9:30 AM</td>
+                                <td class="border px-4 py-2">GE1</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM14</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">9:30 - 11:30 PM</td>
+                                <td class="border px-4 py-2 text-yellow-300">DS1</td>
+                                <td class="border px-4 py-2">RM14</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">1:00 - 2:00 PM</td>
+                                <td class="border px-4 py-2">CAH3</td>
+                                <td class="border px-4 py-2 text-yellow-300">RM21</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="w-full flex justify-center items-center">
+                <p class="text-2xl font-robotoCondensed text-yellow-300 font-semibold italic" id="saturday">S</p>
+                <div id="saturday-schedule" class="hidden w-full flex flex-col justify-center items-center absolute top-full mt-8 ml-0 mr-72">
+                    <p class="ml-12 text-xl font-robotoCondensed text-white font-semibold italic">Saturday Schedule Details</p>
+                    <table class="text-white mt-4 ml-6">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2">Time</th>
+                                <th class="px-4 py-2">Subject</th>
+                                <th class="px-4 py-2">Room</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">7:30 - 10:30 AM</td>
+                                <td class="border px-4 py-2">CWTS</td>
+                                <td class="border px-4 py-2 text-yellow-300">PSU</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">7:30 - 10:30 PM</td>
+                                <td class="border px-4 py-2 text-yellow-300">LTS</td>
+                                <td class="border px-4 py-2">PSU</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2 text-yellow-300">7:30 - 10:30 PM</td>
+                                <td class="border px-4 py-2">ROTC</td>
+                                <td class="border px-4 py-2 text-yellow-300">PSU</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <script>
+                function toggleSchedule(day) {
+                    const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+                    days.forEach(d => {
+                        const schedule = document.getElementById(`${d}-schedule`);
+                        if (d === day) {
+                            schedule.classList.toggle('hidden');
+                        } else {
+                            schedule.classList.add('hidden');
+                        }
+                    });
+                }
+            
+                document.getElementById('monday').addEventListener('click', function() {
+                    toggleSchedule('monday');
+                });
+            
+                document.getElementById('tuesday').addEventListener('click', function() {
+                    toggleSchedule('tuesday');
+                });
+            
+                document.getElementById('wednesday').addEventListener('click', function() {
+                    toggleSchedule('wednesday');
+                });
+
+                document.getElementById('thursday').addEventListener('click', function() {
+                    toggleSchedule('thursday');
+                });
+
+                document.getElementById('friday').addEventListener('click', function() {
+                    toggleSchedule('friday');
+                });
+
+                document.getElementById('saturday').addEventListener('click', function() {
+                    toggleSchedule('saturday');
+                });
+            </script>
+        </div>
+
+        <div class="lg:block mt-48 cursor-pointer absolute pt-72 lg:mt-20 lg:ml-14">
+            <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl mr-5 font-robotoCondensed border rounded-md px-6 py-1 hover:bg-yellow-200 hover:text-white">Login</a>
+            <a href="https://my.parsu.edu.ph/goa/sias/" target="_blank" rel="noopener noreferrer" class="text-amber-200 text-2xl font-robotoCondensed border rounded-md px-4 py-1 hover:bg-yellow-200 hover:text-white">Sign Up</a>
+        </div>
+    </section>
+
+
+
+
+    <!-- Subjects -->
+    <!-- <section id="subjects" class="w-full h-screen flex items-center justify-center relative">
+        <img src="/img/31.jpg" alt="home" class="w-full h-screen object-cover object-center">
+
+        <div class="absolute flex items-center justify-start top-32">
+            <p class="text-6xl font-robotoCondensed text-white font-bold">Our <span class="text-yellow-200">class subjects</span> this <span class="text-yellow-200 underline decoration-2">semester.</span></p>
+        </div>
+
+        <div class="absolute items-center text-center">
+            <ul class="flex flex-col text-center text-3xl font-robotoCondensed font-bold text-white mt-16">
+                <li class="flex items-center justify-center mb-4 mt-8 hover:underline hover:decoration-yellow-200 hover:text-yellow-200"><span>Mr. <span class="text-yellow-200">Michael</span> Amata</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-yellow-200 size-6 mr-4 ml-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                  </svg><span>Introduction <span class="text-yellow-200">to</span> Computing</span></li>
+                <li class="flex items-center justify-center mb-4 hover:underline hover:decoration-yellow-200 hover:text-yellow-200"><span>Mr. <span class="text-yellow-200">Jholan</span> Sabaria</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-4 ml-4 text-yellow-200">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+                  </svg>
+                  <span>Fundamentals <span class="text-yellow-200">of</span> Programming</span></li>
+                <li class="flex items-center justify-center mb-4 hover:underline hover:decoration-yellow-200 hover:text-yellow-200"><span>Mr. <span class="text-yellow-200">Romen</span> Cano</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-4 ml-4 text-yellow-200">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+                  </svg>
+                  <span>The <span class="text-yellow-200">Contemporary</span> World</span></li>
+                <li class="flex items-center justify-center mb-4 hover:underline hover:decoration-yellow-200 hover:text-yellow-200"><span>Mr. <span class="text-yellow-200">Aldrin</span> Rodriguez</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-4 ml-4 text-yellow-200">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                  </svg>
+                  <span>The <span class="text-yellow-200">Peace</span> Studies</span></li>
+                <li class="flex items-center justify-center mb-4 hover:underline hover:decoration-yellow-200 hover:text-yellow-200"><span>Ms. <span class="text-yellow-200">Angela</span> Zarcedo</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-4 ml-4 text-yellow-200">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                  </svg>
+                  Understanding <span class="text-yellow-200">The</span> Self</li>
+                <li class="flex items-center justify-center mb-4 hover:underline hover:decoration-yellow-200 hover:text-yellow-200"><span>Ms. <span class="text-yellow-200">Angelyn</span> Benitez</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-4 ml-4 text-yellow-200">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z" />
+                  </svg>
+                  <span>The <span class="text-yellow-200">Discrete</span> Structures</span></li>
+                <li class="flex items-center justify-center mb-4 hover:underline hover:decoration-yellow-200 hover:text-yellow-200"><span>Mr. <span class="text-yellow-200">Allan</span> Asetre</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-4 ml-4 text-yellow-200">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
+                  </svg>
+                  <span>Physical <span class="text-yellow-200">Health</span>, Fitness</li>
+                    <li class="flex items-center justify-center mb-4 hover:underline hover:decoration-yellow-200 hover:text-yellow-200"><span>Mr. <span class="text-yellow-200">Ricky</span> Laureta</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-4 ml-4 text-yellow-200">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
+                      </svg>
+                      <span>Readings in <span class="text-yellow-200">Philippines</span> History</li>
+            </ul>
+        </div>
+    </section> -->
+
+    <footer class="w-full text-yellow-200 font-robotoCondensed fixed p-4 bottom-0 flex items-center justify-center lg:justify-start pl-0 lg:pl-14 items-center">
+        <p>&copy; 2024 BSCS 1B.</p>
+    </footer>
+</body>
+</html>
